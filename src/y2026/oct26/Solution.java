@@ -16,17 +16,17 @@ public class Solution {
   }
 
   public int halloweenSwap(int[] costumes) {
-    boolean[] visited = new boolean[costumes.length];
     int swaps = 0;
 
     for(int i = 0; i < costumes.length; i++) {
-      if(visited[i]) continue;
+      if(costumes[i] <= 0) continue;
 
       int current = i;
       int cycleLength = 0;
-      while(!visited[current]) {
-        visited[current] = true;
-        current = costumes[current];
+      while(costumes[current] >= 0) {
+        int next = costumes[current];
+        costumes[current] = -(next + 1);
+        current = next;
         cycleLength++;
       }
 
