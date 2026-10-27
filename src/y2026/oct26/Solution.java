@@ -12,6 +12,7 @@ public class Solution {
     System.out.println(sol.halloweenSwap(new int[]{1, 2, 0}));
     System.out.println(sol.halloweenSwap(new int[]{4, 3, 2, 1, 0}));
     System.out.println(sol.halloweenSwap(new int[]{2, 3, 4, 0, 1}));
+    System.out.println(sol.halloweenSwap(new int[]{0, 2, 1}));
 
   }
 
@@ -19,7 +20,7 @@ public class Solution {
     int swaps = 0;
 
     for(int i = 0; i < costumes.length; i++) {
-      if(costumes[i] <= 0) continue;
+      if(costumes[i] < 0) continue;
 
       int current = i;
       int cycleLength = 0;
