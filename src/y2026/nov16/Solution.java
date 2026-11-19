@@ -6,6 +6,7 @@ import java.util.List;
 // A kangaroo word contains a shorter synonym (its "joey") whose letters appear in order,
 // but not necessarily consecutively. Given a lowercase word and a list of its synonyms (non-empty),
 // return all the joeys in the list's original order.
+
 public class Solution {
 
   static void main() {
